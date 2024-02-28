@@ -1,0 +1,30 @@
+<!-- templates/todolist.html -->
+
+<!-- Author: Alexander Aldama-Apodaca -->
+<!-- Generated using Microsoft Copilot -->
+
+<!-- Contains code for a functioning to-do list application -->
+<!-- Users currently cannot save their to-do lists -->
+
+{% extends "base.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<link rel="stylesheet" href="checklistStyles.css">
+
+<!-- Add new tasks -->
+
+    <div class="col-10">
+        <h1>To-Do List</h1>
+        <div class="input-container">
+            <input type="text" id="task" placeholder="Add a new task...">
+            <button id="add">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+
+<script src="{% static 'todolistApp.js' %}"></script>
+
+{% endblock %}
